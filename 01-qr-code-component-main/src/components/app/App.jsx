@@ -2,7 +2,11 @@ import Card from '../card/Card';
 import '../app/App.scss';
 
 function App() {
-  return <Card />;
+  return (
+    <div className='app'>
+      <Card />
+    </div>
+  );
 }
 
 export default App;
