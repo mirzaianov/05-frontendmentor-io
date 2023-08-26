@@ -6,26 +6,33 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
   &__info {
     padding: 1.25em;
     background-image: linear-gradient($gradient-light-slate-blue, $gradient-light-royal-blue);
     text-align: center;
-    border-radius: 0 0 2em 1em;
+    border-radius: 0 0 2em 2em;
   }
   &__subtitle {
     font-size: $fz-subtitle;
     color: $neutral-light-lavender;
     padding-bottom: 1.25em;
     font-weight: 700;
+    &--secondary {
+      color: $neutral-dark-gray-blue;
+      padding-bottom: 0;
+    }
   }
+
   &__result {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45%;
+    width: 43.5%;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.25em;
     background-image: linear-gradient($gradient-violet-blue, $gradient-persian-blue);
     border-radius: 50%;
   }
@@ -53,7 +60,76 @@
   }
 
   &__general {
+    padding: 1.5em 2em 1.75em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__lists {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    padding-bottom: 0.5em;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
     padding: 1em;
+    border-radius: 0.75em;
+    &--red {
+      background-color: $bg-red;
+    }
+    &--yellow {
+      background-color: $bg-yellow;
+    }
+    &--green {
+      background-color: $bg-green;
+    }
+    &--blue {
+      background-color: $bg-blue;
+    }
+  }
+
+  &__icon {
+    // width: 10%;
+  }
+  &__name {
+    width: 70%;
+    justify-self: start;
+    padding-left: 0.75em;
+    &--red {
+      color: $primary-light-red;
+    }
+    &--yellow {
+      color: $primary-orange-yellow;
+    }
+    &--green {
+      color: $primary-green-teal;
+    }
+    &--blue {
+      color: $primary-cobalt-blue;
+    }
+  }
+
+  &__score {
+    width: 20%;
+    padding-right: 4em;
+  }
+  &__button {
+    background-color: $neutral-dark-gray-blue;
+    color: $neutral-white;
+    font-size: $fz-p;
+    font-weight: 700;
+    padding: 1em;
+    border-radius: 2em;
+  }
+}
+
+.text {
+  &--light {
+    color: $neutral-light-lavender;
   }
 }
 

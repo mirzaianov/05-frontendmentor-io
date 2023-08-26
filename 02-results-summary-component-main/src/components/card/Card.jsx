@@ -21,20 +21,66 @@ function Card() {
         <p className='card__text'>You scored higher than 65% of the people who have taken these tests.</p>
       </div>
       <div className='card__general'>
-        <div className='card__subtitle card__subtitle--secondary'></div>
-        <div className='card__list'>
-          <div className='card__item'>
-            <img
-              className='card__icon'
-              src={iconReaction}
-              alt='Reaction'
-            />
-            <span className='card__name'>Reaction</span>
-            <span className='card__score'>
-              <span className='text--bold'>80</span> / 100
-            </span>
+        <div className='card__subtitle card__subtitle--secondary'>Summary</div>
+        <div className='card__lists'>
+          <div className='card__list'>
+            <div className='card__item card__item--red'>
+              <img
+                className='card__icon'
+                src={iconReaction}
+                alt='Reaction'
+              />
+              <span className='card__name card__name--red'>Reaction</span>
+              <span className='card__score'>
+                80&nbsp;&nbsp;
+                <span className='text--light'>/&nbsp;100</span>
+              </span>
+            </div>
+          </div>
+          <div className='card__list'>
+            <div className='card__item card__item--yellow'>
+              <img
+                className='card__icon'
+                src={iconMemory}
+                alt='Memory'
+              />
+              <span className='card__name card__name--yellow'>Memory</span>
+              <span className='card__score'>
+                92&nbsp;&nbsp;
+                <span className='text--light'>/&nbsp;100</span>
+              </span>
+            </div>
+          </div>
+          <div className='card__list'>
+            <div className='card__item card__item--green'>
+              <img
+                className='card__icon'
+                src={iconVerbal}
+                alt='Verbal'
+              />
+              <span className='card__name card__name--green'>Verbal</span>
+              <span className='card__score'>
+                61&nbsp;&nbsp;
+                <span className='text--light'>/&nbsp;100</span>
+              </span>
+            </div>
+          </div>
+          <div className='card__list'>
+            <div className='card__item card__item--blue'>
+              <img
+                className='card__icon'
+                src={iconVisual}
+                alt='Visual'
+              />
+              <span className='card__name card__name--blue'>Visual</span>
+              <span className='card__score'>
+                72&nbsp;&nbsp;
+                <span className='text--light'>/&nbsp;100</span>
+              </span>
+            </div>
           </div>
         </div>
+        <button className='card__button'>Continue</button>
       </div>
     </div>
   );
