@@ -133,6 +133,54 @@
   }
 }
 
-@media (min-width: 375px) {
-  // --card-radius: 1.5em;
+@media (min-width: 575px) {
+  .card {
+    width: 735px;
+    height: 510px;
+    flex-direction: row;
+    border-radius: 2em;
+    box-shadow: 10px 10px 30px 1px hsl(241, 100%, 89%, 0.5);
+
+    &__info {
+      border-radius: 2em;
+      width: 50%;
+      padding: 2em;
+    }
+    &__subtitle {
+      font-size: calc(1.5 * $fz-p);
+      padding-bottom: 1.5em;
+      &--secondary {
+        padding-bottom: 0;
+      }
+    }
+    &__result {
+      width: 65%;
+      margin-bottom: 2em;
+    }
+    &__number {
+      font-size: calc(1.25 * $fz-number);
+    }
+    &__descr {
+      font-size: calc(1.1 * $fz-p);
+    }
+    &__title {
+      font-size: calc(2 * $fz-p);
+      padding-bottom: 0.5em;
+    }
+    &__text {
+      font-size: calc(1.1 * $fz-p);
+      // margin-bottom: 1.5em;
+    }
+
+    &__general {
+      width: 50%;
+      padding: 2em 2em 3em 2em;
+    }
+    &__lists {
+      font-size: calc(1.1 * $fz-p);
+    }
+    &__item {
+      padding: 0.9em;
+    }
+  }
 }
