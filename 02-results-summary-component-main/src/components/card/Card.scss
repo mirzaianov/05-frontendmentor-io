@@ -4,6 +4,7 @@
   // --card-padding: 1em;
   background-color: $neutral-white;
   height: 100vh;
+  width: 375px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -130,6 +131,11 @@
 .text {
   &--light {
     color: $neutral-light-lavender;
+  }
+}
+
+@media (min-width: 375px) {
+  .card {
   }
 }
 
