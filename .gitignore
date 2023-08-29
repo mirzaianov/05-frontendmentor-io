@@ -4,6 +4,8 @@ dist/
 .DS_Store
 coverage/
 .vscode/
+.eslintrc.json
+.prettierrc
 
 
 # Avoid accidental upload of the Sketch and Figma design files
