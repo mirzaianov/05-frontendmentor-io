@@ -6,6 +6,7 @@ coverage/
 .vscode/
 .eslintrc.json
 .prettierrc
+**/package-lock.json
 
 
 # Avoid accidental upload of the Sketch and Figma design files
