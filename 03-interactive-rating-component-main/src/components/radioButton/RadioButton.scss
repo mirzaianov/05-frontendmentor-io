@@ -38,12 +38,12 @@
   visibility: hidden;
 }
 
-.radio-input:checked + span {
-  // border: 2px solid #f4b400;
-  // color: $color-white;
-}
+// .radio-input:checked + span {
+// border: 2px solid #f4b400;
+// color: $color-white;
+// }
 
-.radio-input:checked + span:after {
+.radio-input:checked + .custom-radio::after {
   color: $color-white;
   opacity: 1;
 }
@@ -92,5 +92,5 @@
 // }
 
 /* for inner filled circle */
-.custom-radio::after {
-}
+// .custom-radio::after {
+// }
