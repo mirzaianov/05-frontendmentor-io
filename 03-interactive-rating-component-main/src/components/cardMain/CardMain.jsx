@@ -6,18 +6,18 @@ import RadioButton from '../radioButton/RadioButton';
 import './CardMain.scss';
 
 function CardMain() {
-  const [radio, setRadio] = useState({ checked: false });
+  const [checked, setChecked] = useState(true);
 
   const onChangeRadio = e => {
     const { checked } = e.target;
     console.log('checked', checked);
 
     if (checked === true) {
-      setRadio({ checked: false });
+      setChecked({ checked: false });
     }
 
     if (checked === false) {
-      setRadio({ checked: true });
+      setChecked({ checked: true });
     }
   };
 
@@ -50,7 +50,7 @@ function CardMain() {
             value='Choice1'
             text='1'
             onChange={onChangeRadio}
-            checked={radio}
+            checked={checked}
           />
           <RadioButton
             name='choice'
@@ -58,7 +58,7 @@ function CardMain() {
             value='Choice2'
             text='2'
             onChange={onChangeRadio}
-            checked={radio}
+            checked={false}
           />
           <RadioButton
             name='choice'
@@ -66,7 +66,7 @@ function CardMain() {
             value='Choice3'
             text='3'
             onChange={onChangeRadio}
-            checked={radio}
+            checked={false}
           />
           <RadioButton
             name='choice'
@@ -74,7 +74,7 @@ function CardMain() {
             value='Choice4'
             text='4'
             onChange={onChangeRadio}
-            checked={radio}
+            checked={false}
           />
           <RadioButton
             name='choice'
@@ -82,7 +82,7 @@ function CardMain() {
             value='Choice5'
             text='5'
             onChange={onChangeRadio}
-            checked={radio}
+            checked={false}
           />
         </div>
 
