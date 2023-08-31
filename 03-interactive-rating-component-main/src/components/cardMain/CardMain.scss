@@ -1,38 +1,9 @@
 @import '../../styles/variables.scss';
 
-input[type='radio'] {
-  display: none;
-}
-
 img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
-}
-
-.checked + .label {
-  background: $color-grey-light;
-  color: $color-white;
-}
-
-.label {
-  width: 40px;
-  aspect-ratio: 1 / 1;
-  background: $color-grey-medium;
-  cursor: pointer;
-  color: $color-grey-light;
-  // border: greenyellow 1px solid;
-  border-radius: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: calc(0.95 * $fz);
-  // line-height: 1;
-  padding-top: 5px;
-  &:hover {
-    background: $color-orange;
-    color: $color-white;
-  }
 }
 
 .card-main {

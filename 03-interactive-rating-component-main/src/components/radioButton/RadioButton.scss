@@ -1,0 +1,96 @@
+@import '../../styles/variables.scss';
+
+.radio-input {
+  visibility: hidden;
+}
+
+// .radio-label {
+//   width: 40px;
+//   aspect-ratio: 1 / 1;
+//   background: $color-grey-medium;
+//   cursor: pointer;
+//   color: $color-grey-light;
+//   border-radius: 2em;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: calc(0.95 * $fz);
+//   // line-height: 1;
+//   padding-top: 5px;
+//   &:hover {
+//     background: $color-orange;
+//     color: $color-white;
+//   }
+// }
+
+.radio-label {
+  color: $color-grey-light;
+  font-size: 14px;
+  font-weight: 400;
+  // margin-right: 7px;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+.radio-input {
+  position: absolute;
+  margin: 0;
+  visibility: hidden;
+}
+
+.radio-input:checked + span {
+  // border: 2px solid #f4b400;
+  // color: $color-white;
+}
+
+.radio-input:checked + span:after {
+  color: $color-white;
+  opacity: 1;
+}
+
+.custom-radio {
+  // left: -8px;
+  // top: 6px;
+  cursor: pointer;
+  // width: 17px;
+  // height: 17px;
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  // border: 2px solid #9a9a9a;
+  background-color: $color-grey-medium;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding-top: 9.5px;
+  // border: greenyellow 1px solid;
+  &:hover {
+    background: $color-orange;
+    color: $color-white;
+  }
+  &::after {
+    content: attr(data-title);
+    width: 100%;
+    height: 100%;
+    background: $color-grey-light;
+    // color: $color-white;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// .data-title {
+//   margin-top: 10px;
+// }
+
+/* for inner filled circle */
+.custom-radio::after {
+}

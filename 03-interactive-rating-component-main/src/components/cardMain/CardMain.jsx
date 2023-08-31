@@ -1,20 +1,24 @@
 import { useState } from 'react';
+// import PropTypes from 'prop-types';
+
+import RadioButton from '../radioButton/RadioButton';
 
 import './CardMain.scss';
 
 function CardMain() {
-  const [radio, setRadio] = useState(true);
+  const [radio, setRadio] = useState({ checked: false });
 
-  const handleChange = e => {
-    setRadio(e.target.checked);
+  const onChangeRadio = e => {
+    const { checked } = e.target;
+    console.log('checked', checked);
 
-    console.log(e, radio);
-  };
+    if (checked === true) {
+      setRadio({ checked: false });
+    }
 
-  const handleSubmit = e => {
-    e.preventDefault();
-
-    console.log(radio);
+    if (checked === false) {
+      setRadio({ checked: true });
+    }
   };
 
   return (
@@ -36,79 +40,50 @@ function CardMain() {
       </p>
 
       <form
-        className='card--main__rating'
-        onSubmit={handleSubmit}>
+        className='card-main__rating'
+        // onSubmit={handleSubmit}
+      >
         <div className='card-main__values'>
-          <input
-            className='card-main__value'
-            type='radio'
+          <RadioButton
+            name='choice'
             id='choice1'
-            name='choice'
-            value='choice1'
-            onChange={handleChange}
-            checked={true}
+            value='Choice1'
+            text='1'
+            onChange={onChangeRadio}
+            checked={radio}
           />
-          <label
-            className='label'
-            htmlFor='choice1'>
-            1
-          </label>
-
-          <input
-            className='card-main__value'
-            type='radio'
+          <RadioButton
+            name='choice'
             id='choice2'
-            name='choice'
-            value='choice2'
-            onChange={handleChange}
+            value='Choice2'
+            text='2'
+            onChange={onChangeRadio}
+            checked={radio}
           />
-          <label
-            className='label'
-            htmlFor='choice2'>
-            2
-          </label>
-
-          <input
-            className='card-main__value'
-            type='radio'
+          <RadioButton
+            name='choice'
             id='choice3'
-            name='choice'
-            value='choice3'
-            onChange={handleChange}
+            value='Choice3'
+            text='3'
+            onChange={onChangeRadio}
+            checked={radio}
           />
-          <label
-            className='label'
-            htmlFor='choice3'>
-            3
-          </label>
-
-          <input
-            className='card-main__value'
-            type='radio'
+          <RadioButton
+            name='choice'
             id='choice4'
-            name='choice'
-            value='choice4'
-            onChange={handleChange}
+            value='Choice4'
+            text='4'
+            onChange={onChangeRadio}
+            checked={radio}
           />
-          <label
-            className='label'
-            htmlFor='choice4'>
-            4
-          </label>
-
-          <input
-            className='card-main__value'
-            type='radio'
+          <RadioButton
+            name='choice'
             id='choice5'
-            name='choice'
-            value='choice5'
-            onChange={handleChange}
+            value='Choice5'
+            text='5'
+            onChange={onChangeRadio}
+            checked={radio}
           />
-          <label
-            className='label'
-            htmlFor='choice5'>
-            5
-          </label>
         </div>
 
         <input
@@ -120,5 +95,14 @@ function CardMain() {
     </div>
   );
 }
+
+// RadioButton.propTypes = {
+//   name: PropTypes.node,
+//   id: PropTypes.node,
+//   value: PropTypes.node,
+//   text: PropTypes.node,
+//   onChange: PropTypes.node,
+//   checked: PropTypes.node,
+// };
 
 export default CardMain;
