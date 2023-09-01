@@ -1,11 +1,11 @@
 import { useState } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import RadioButton from '../radioButton/RadioButton';
 
 import './CardMain.scss';
 
-function CardMain() {
+function CardMain({ toggleModal }) {
   const [radio, setRadio] = useState();
 
   const handleChangeRadio = e => {
@@ -19,7 +19,9 @@ function CardMain() {
   const handleSubmit = e => {
     e.preventDefault();
 
-    console.log('Submitted radio:', radio);
+    toggleModal();
+
+    console.log('Submitted radio ==>', radio);
   };
 
   return (
@@ -89,13 +91,8 @@ function CardMain() {
   );
 }
 
-// RadioButton.propTypes = {
-//   name: PropTypes.node,
-//   id: PropTypes.node,
-//   value: PropTypes.node,
-//   text: PropTypes.node,
-//   onChange: PropTypes.node,
-//   checked: PropTypes.node,
-// };
+CardMain.propTypes = {
+  toggleModal: PropTypes.node,
+};
 
 export default CardMain;

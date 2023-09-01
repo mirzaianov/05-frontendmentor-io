@@ -1,18 +1,18 @@
-// import { useState } from 'react';
+import { useState } from 'react';
+
 import CardMain from './components/cardMain/CardMain';
 import CardModal from './components/cardModal/CardModal';
 
 import './App.scss';
 
 function App() {
-  // const [show, setShow] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
-  return (
-    <div className='app'>
-      <CardMain />
-      <CardModal />
-    </div>
-  );
+  const toggleModal = () => {
+    setShowModal(() => !showModal);
+  };
+
+  return <div className='app'>{showModal ? <CardMain toggleModal={toggleModal} /> : <CardModal />}</div>;
 }
 
 export default App;
