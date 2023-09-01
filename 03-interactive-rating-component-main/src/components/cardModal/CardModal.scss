@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 img {
-  width: 50%;
+  // width: 50%;
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
@@ -18,10 +18,12 @@ img {
   text-align: center;
 
   &__image {
-    // width: 50%;
     display: flex;
     justify-content: center;
     margin-bottom: 2em;
+    & > img {
+      width: 50%;
+    }
   }
 
   &__info {
@@ -41,5 +43,29 @@ img {
   &__descr {
     color: $color-grey-light;
     margin-bottom: 1.5em;
+  }
+}
+
+@media (min-width: 375px) {
+  .card-modal {
+    width: 410px;
+    height: 415px;
+    padding: 3em 2.25em;
+    border-radius: 2.5em;
+    font-size: $fz;
+
+    &__image {
+      & > img {
+        width: 47.5%;
+      }
+    }
+
+    &__info {
+      margin-bottom: 1.85em;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+    }
   }
 }

@@ -10,6 +10,8 @@ function App() {
 
   const toggleModal = () => {
     setShowModal(() => !showModal);
+
+    console.log('toggleModal, showModal ==>', showModal);
   };
 
   return <div className='app'>{showModal ? <CardMain toggleModal={toggleModal} /> : <CardModal />}</div>;

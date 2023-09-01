@@ -94,3 +94,15 @@
 /* for inner filled circle */
 // .custom-radio::after {
 // }
+
+@media (min-width: 375px) {
+  .radio-label {
+    font-size: calc(1.1 * $fz);
+    font-weight: 700;
+  }
+
+  .custom-radio {
+    width: 50px;
+    padding-top: 13.5px;
+  }
+}

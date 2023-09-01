@@ -13,7 +13,7 @@ function CardMain({ toggleModal }) {
 
     setRadio(() => value);
 
-    console.log('value ==>', e, value);
+    console.log('handleChangeRadio, value ==>', value);
   };
 
   const handleSubmit = e => {
@@ -21,7 +21,7 @@ function CardMain({ toggleModal }) {
 
     toggleModal();
 
-    console.log('Submitted radio ==>', radio);
+    console.log('handleSubmit, radio ==>', radio);
   };
 
   return (
