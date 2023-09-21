@@ -2,8 +2,6 @@
 
 .app {
   display: flex;
-  // justify-content: center;
-  // align-items: center;
   height: 100vh;
   padding: 5.87em 0;
 
@@ -44,7 +42,7 @@
   }
   &__description {
     width: 80%;
-    line-height: 1.7;
+    line-height: 1.5;
     height: 25%;
     color: $color-main-p;
   }
@@ -53,6 +51,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1em;
   }
   &__text {
     &--accent {
@@ -70,4 +69,49 @@
 .container {
   width: 87.145%;
   margin: 0 auto;
+}
+
+@media (min-width: 375px) {
+  .app {
+    &__description {
+      line-height: 1.7;
+    }
+  }
+}
+
+@media (min-width: 470px) {
+  .app {
+    &__stats {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      gap: 3em;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 816px) {
+  .wrapper {
+    flex-direction: row;
+    max-height: 445px;
+    align-items: flex-start;
+  }
+
+  .container {
+    max-width: 1110px;
+  }
+
+  .app {
+    &__image {
+      width: 50%;
+      max-width: 540px;
+      height: 100%;
+      order: 1;
+    }
+
+    &__content {
+      width: 50%;
+    }
+  }
 }

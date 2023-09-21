@@ -1,6 +1,7 @@
 import Stat from './components/stat/Stat';
 
 import './App.scss';
+import imageDesktop from '/image-header-desktop.jpg';
 import imageMobile from '/image-header-mobile.jpg';
 
 function App() {
@@ -8,11 +9,20 @@ function App() {
     <div className="app container">
       <div className="wrapper">
         <div className="app__image">
-          <img
-            className="app__image--mobile"
-            src={imageMobile}
-            alt="People in a meeting"
-          />
+          <picture>
+            <source
+              className="app__image--mobile"
+              media="(min-width: 816px)"
+              srcSet={imageDesktop}
+              alt="People in a meeting"
+            />
+            <img
+              className="app__image--mobile"
+              src={imageMobile}
+              alt="People in a meeting"
+            />
+          </picture>
+
           <div className="app__image--accent" />
         </div>
 
