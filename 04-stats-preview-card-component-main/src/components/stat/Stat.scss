@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.stat {
+  &__quantity {
+    margin-bottom: 0.4em;
+    letter-spacing: 1.2px;
+  }
+  &__description {
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-stat;
+    font-size: calc(0.8 * $fz);
+    letter-spacing: 1.2px;
+  }
+}

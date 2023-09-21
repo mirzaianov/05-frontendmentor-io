@@ -5,10 +5,11 @@ import imageMobile from '/image-header-mobile.jpg';
 
 function App() {
   return (
-    <div className="app">
-      <div className="wrapper container">
+    <div className="app container">
+      <div className="wrapper">
         <div className="app__image">
           <img
+            className="app__image--mobile"
             src={imageMobile}
             alt="People in a meeting"
           />
