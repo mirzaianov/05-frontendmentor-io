@@ -3,26 +3,24 @@ import Stat from './components/stat/Stat';
 import './App.scss';
 import imageDesktop from '/image-header-desktop.jpg';
 import imageMobile from '/image-header-mobile.jpg';
+// import basket from '/basket.jpg';
+// import girl from '/girl.jpg';
 
 function App() {
   return (
     <div className="app container">
       <div className="wrapper">
         <div className="app__image">
-          <picture>
-            <source
-              className="app__image--mobile"
-              media="(min-width: 816px)"
-              srcSet={imageDesktop}
-              alt="People in a meeting"
-            />
-            <img
-              className="app__image--mobile"
-              src={imageMobile}
-              alt="People in a meeting"
-            />
-          </picture>
-
+          <img
+            className="app__image--desktop"
+            src={imageDesktop}
+            alt="Desktop"
+          />
+          <img
+            className="app__image--mobile"
+            src={imageMobile}
+            alt="Mobile"
+          />
           <div className="app__image--accent" />
         </div>
 
